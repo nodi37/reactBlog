@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Zen+Kurenaido&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+}
+
+* a,
+input,
+button {
+    cursor: pointer;
+}
+
+* a {
+    text-decoration: none;
+}
+
+.mainwrapper {
+    height: 100vh;
+    width: 100%;
+    background-color: #393E46;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* MAIN START */
+.panelmain {
+    min-width: 300px;
+    flex: 5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: scroll;
+}
+
+.item {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #222831;
+    border-radius: 2px;
+    color: #EEEEEE;
+
+}
+
+.item p {
+    font-weight: 100;
+    font-size: 12px;
+    color: white;
+}
+
+.item h1,
+h3 {
+    font-weight: 100;
+}
+
+.item h1 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.item h3 {
+    font-size: 16px;
+}
+
+.item .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+.item .buttons button {
+    padding: 5px;
+    width: 75px;
+    border: none;
+    border-radius: 2px;
+    filter: brightness(80%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.abtn {
+    background-color: #28a745;
+    margin-right: 5px;
+    color: white;
+}
+
+.pbtn {
+    background-color: #007bff;
+    margin-right: 5px;
+    color: white;
+}
+
+.upbtn {
+    background-color: #6c757d;
+    margin-right: 5px;
+    color: white;
+}
+
+.ebtn {
+    background-color: #ffc107;
+    color: black;
+}
+
+.dbtn {
+    background-color: #dc3545;
+    margin-left: auto;
+    color: white;
+}
+
+.item .buttons button:hover {
+    filter: brightness(100%);
+}
+
+.item .info {
+    margin-top: 5px;
+    color: goldenrod;
+    font-weight: 100;
+    font-size: 16px;
+    text-align: center;
+}
+
+.comments {
+    margin-top: 5px;
+    color: white;
+    background-color: black;
+    font-weight: 100;
+    font-size: 16px;
+    text-align: center;
+    padding: 5px;
+}
+
+.published {
+    background-color: seagreen;
+}
+
+.loadmore {
+    background-color: dimgray;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    filter: brightness(80%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.loadmore p {
+    cursor: pointer;
+}
+
+
+.addbtn {
+    background-color: #FF2E63;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    filter: brightness(80%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+
+.loadmore:hover,
+.addbtn:hover {
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+/* ASIDE START */
+aside {
+    flex: 1;
+    min-width: 250px;
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #222831;
+}
+
+aside * {
+    width: 100%;
+}
+
+aside h1 {
+    text-align: center;
+    color: #EEEEEE;
+    font-weight: 100;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+aside button {
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #24484d;
+    border: none;
+    color: white;
+    border-radius: 2px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+aside button:hover {
+    background-color: #3a6f75;
+    cursor: pointer;
+}
+
+aside .logout {
+    background-color: darkred;
+}
+
+aside .logout:hover {
+    background-color: red;
+}
+
+.btnnew {
+    position: relative;
+}
+
+.btnnew .indicator {
+    background-color: red;
+    position: absolute;
+    width: 20px;
+    height: 22px;
+    border-radius: 2px;
+    right: 2px;
+    top: 2px;
+    text-align: center;
+    line-height: 22px;
+}
+
+/* ASIDE END */
+
+
+/* POST EDITOR */
+
+.qeditor {
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+
+.ql-editor {
+    min-height: 250px;
+}
+
+.ql-toolbar {
+    background-color: #fff;
+}
+
+.editorbuttons {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.editorbuttons button {
+    padding: 5px;
+    width: 150px;
+    border: none;
+    border-radius: 2px;
+    filter: brightness(80%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.cbtn {
+    background-color: #dc3545;
+    margin-left: auto;
+    color: white;
+}
+
+.sbtn {
+    background-color: #28a745;
+    color: white;
+}
+
+.cbtn:hover,
+.sbtn:hover,
+.image-input label:hover {
+    filter: brightness(100%);
+    cursor: pointer;
+}
+
+#asave {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.buttons p {
+    margin-right: 10px;
+}
+
+.editorbuttons p {
+    color: white;
+    text-align: center;
+    line-height: 27px;
+}
+
+#title {
+    padding: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    border: 1px white solid;
+    border-radius: 2px;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+#title:focus {
+    outline: none;
+}
+
+#title::placeholder {
+    color: black;
+    opacity: 1;
+}
+
+#title:-ms-input-placeholder {
+    color: black;
+}
+
+#title::-ms-input-placeholder {
+    color: black;
+}
+
+
+
+.title,
+.image {
+    color: #EEEEEE;
+    font-weight: 100;
+}
+
+.image {
+    color: #EEEEEE;
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#image {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.image-input label {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+    background-color: #007bff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    filter: brightness(80%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.savingelement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.pDesc {
+    margin-bottom: 10px;
+}

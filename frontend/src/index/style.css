@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Zen+Kurenaido&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    cursor: default;
+}
+
+* a,
+input {
+    cursor: pointer;
+}
+
+body {
+    background-color: darkgray;
+}
+
+/* HADER START */
+header {
+    height: 50px;
+    width: 100%;
+    background-color: #222831;
+    -webkit-box-shadow: 0px 25px 48px -16px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 25px 48px -16px rgba(0, 0, 0, 0.25);
+}
+
+/* SEARCH INPUT START */
+.cpart {
+    max-width: 1250px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.searchinput {
+    position: absolute;
+    height: 100%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.searchinput input {
+    font-family: 'Zen Kurenaido', sans-serif;
+    padding: 5px;
+    border: none;
+    background-color: #222831;
+    color: white;
+    border-bottom: 1px white solid;
+    font-size: 16px;
+    max-width: 100px;
+    min-width: 100px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+}
+
+.searchinput input:focus {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.searchinput input:not(:placeholder-shown) {
+    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
+}
+
+.searchinput input:focus {
+    outline: none;
+}
+
+.searchinput input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.searchinput input:-ms-input-placeholder {
+    color: white;
+}
+
+.searchinput input::-ms-input-placeholder {
+    color: white;
+}
+
+/* SEARCH INPUT END */
+
+/* LOGO START */
+.logo {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Zen Kurenaido', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* LOGO END */
+
+/* HEADER END */
+
+/* MAIN START */
+
+.indexmain {
+    width: 100%;
+}
+
+.elements {
+    max-width: 1250px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    /* ZMNIEJSZYC GAP PO BREAKPOINT */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: max-content;
+    grid-auto-rows: max-content;
+}
+
+/*POST START*/
+
+.post {
+    grid-column: span 1;
+    position: relative;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    top: 0px;
+}
+
+.post:first-child {
+    grid-column: 1/-1;
+}
+
+.post:first-child img {
+    height: 500px;
+}
+
+.post:first-child .postdescription .tbtm {
+    margin: 0;
+}
+
+.post img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.postdescription {
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #222831;
+}
+
+.postdescription a h2,
+.postdescription a h5 {
+    cursor: pointer;
+}
+
+.postdescription h2 {
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #EEEEEE;
+}
+
+.postdescription h5 {
+    margin-top: 5px;
+    font-weight: 300;
+    color: dimgray;
+}
+
+.postdescription .tbtm {
+    margin-top: auto;
+    color: lightslategray;
+    text-align: justify;
+}
+
+.post:hover {
+    top: -5px;
+}
+
+.post:first-child:hover {
+    top: 0px;
+}
+
+/*POST END*/
+.loadwrapper {
+    max-width: 1250px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.load {
+    height: 75px;
+    width: 100%;
+    background-color: #222831;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Zen Kurenaido', sans-serif;
+    color: aliceblue;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all .5s;
+    margin-bottom: 10px;
+}
+
+.load:hover {
+    background-color: #393E46;
+}
+
+/* MAIN END */
+
+/* FOOTER */
+footer {
+    height: 100px;
+    background-color: #222831;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+footer h2 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    color: dimgray;
+    font-weight: 100;
+}
+
+/* FOOTER END */
+
+/* POST */
+main {
+    padding: 10px;
+}
+
+.postcontent {
+    min-height: 30px;
+    position: relative;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #222831;
+    color: white;
+    font-weight: 300;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.postcontent .mainimg {
+    max-height: 500px;
+    width: auto;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.postcontent h1,
+.postcontent h2 {
+    font-weight: 300;
+    margin: 10px 0;
+}
+
+.postcontent .posttitle {
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.postcontent p {
+    text-align: justify;
+}
+
+.postcontent img {
+    margin: 5px 0;
+    height: auto;
+    width: 100%;
+}
+
+.dabar {
+    font-weight: 300;
+    color: dimgray;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    margin-left: 2px;
+}
+
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    color: white;
+    height: 20px;
+    width: 20px;
+    background: red;
+    display: flex;
+    place-content: center;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.backbtn {
+    text-align: center;
+    background: dimgray;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.searchpd {
+    background-color: #393E46;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.notfoundmain {
+    min-height: 80vh;
+}
+.notfound h1 {
+    color: white;
+    margin: 100px auto;
+}
