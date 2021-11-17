@@ -9,11 +9,10 @@ mongoose.connect('mongodb://localhost:27017/reactblog', {});
 
 require('dotenv').config();
 
-//app.use(cors({origin: ['http://10.0.0.18:3000', 'http://127.0.0.1:3000']}));
-app.use(cors());
+app.use(cors({origin: 'https://blog.nbtb.eu'}));
 app.set('trust proxy', true);
 app.use(bodyParser.json({
-    limit: "100mb"
+    limit: "200mb"
 }));
 
 const {
@@ -30,6 +29,9 @@ const {
     verifyToken
 } = require("./user");
 
+app.get('/', (req, res)=>{
+    res.redirect('https://blog.nbtb.eu');
+})
 
 //ROUTES:
 app.post('/login', async (req, res) => {

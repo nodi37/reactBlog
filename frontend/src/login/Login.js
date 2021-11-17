@@ -41,7 +41,7 @@ function Login() {
                 } else if(r.status===200) {
                     const tokenvalues = jwt_decode(data.token);
                     const expires = new Date(tokenvalues.exp*1000)
-                    document.cookie = `Token=${data.token}; Expires=${expires}; path=/;`;
+                    document.cookie = `Token=${data.token}; Expires=${expires}; path=/; SameSite=Lax; Secure;`;
                     history.push('/panel/posts');
                 } else {
                     setErrMsg("Server error! Check console!");
